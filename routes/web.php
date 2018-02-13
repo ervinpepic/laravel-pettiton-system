@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('petitions', 'PetitionController');
+Route::get('/admin/petitions', ['as'=> 'admin.index', 'uses'=>'PetitionController@admin']);

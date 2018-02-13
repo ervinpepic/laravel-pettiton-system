@@ -14,7 +14,8 @@ class PetitionController extends Controller
      */
     public function index()
     {
-        //
+
+        return view('petitions.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class PetitionController extends Controller
      */
     public function create()
     {
-        //
+        return view('petitions.create');
     }
 
     /**
@@ -35,7 +36,14 @@ class PetitionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email_address' => 'required',
+            'zipcode' => 'required',
+        ]);
+        Petition::create($request->all());
+        return redirect()->route('petitions.index')->with('success', 'Thank you for voting!');
     }
 
     /**
@@ -81,5 +89,10 @@ class PetitionController extends Controller
     public function destroy(Petition $petition)
     {
         //
+    }
+
+    public function admin() {
+        $petitions = Petition::all();
+            return view('admin.index', compact('petitions'));
     }
 }
