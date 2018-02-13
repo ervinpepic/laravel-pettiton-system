@@ -1,25 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Petition app">
+    <meta name="Petition system" content="App for petition">
     <title>Petition System</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom fonts for this site -->
+    <link href="{{asset('font/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="{{asset('css/hassped.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 </head>
-<body>
 
-<div class="container">
-    <h1>HI there, put your petition vote underneath!</h1>
-    @yield('content')
+<body>
+<header class="masthead bg-primary text-white text-center">
+    <div class="container">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger">Welcome to our petition Application</a>
+    </div>
+</nav>
+@yield('content')
+    </div>
+</header>
+<!-- Footer -->
+<footer class="footer text-center" id="contact">
+    <div class="container">
+        <div class="row">
+            <p class="lead">This is void application created in laravel.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Petition &copy; 2018</small>
+    </div>
 </div>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+<!-- Plugin JavaScript -->
+<script src="{{asset('js/jquery.easing.min.js')}}"></script>
+<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+<!-- Contact Form JavaScript -->
+<script src="{{asset('js/jqBootstrapValidation.js')}}"></script>
+<script src="{{asset('js/contact_me.js')}}"></script>
+<!-- Custom scripts for this template -->
+<script src="{{asset('js/hassped.min.js')}}"></script>
 </body>
 </html>

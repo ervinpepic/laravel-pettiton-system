@@ -25,7 +25,7 @@ class PetitionController extends Controller
      */
     public function create()
     {
-        return view('petitions.create');
+        return view('petitions.index');
     }
 
     /**

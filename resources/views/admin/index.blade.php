@@ -1,14 +1,7 @@
 @extends('petitions.master')
 
 @section('content')
-    <div class="row">
-        <div class="col">
-            <h1>List of all votes</h1>
-            <h4></h4>
-            <h4></h4>
-            <h4></h4>
-            <h4></h4>
-            <table class="table table-bordered table-dark">
+            <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th scope="col">First name</th>
@@ -28,7 +21,4 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
-    </div>
-
     @endsection
