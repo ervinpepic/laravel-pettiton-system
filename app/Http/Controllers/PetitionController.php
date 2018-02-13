@@ -36,14 +36,14 @@ class PetitionController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
+       $validate =  $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'email_address' => 'required',
             'zipcode' => 'required',
         ]);
         Petition::create($request->all());
-        return redirect()->route('petitions.index')->with('success', 'Thank you for voting!');
+        return redirect()->route('petitions.index')->with('success', 'Thank you for voting!',  $validate);
     }
 
     /**
